@@ -1,6 +1,7 @@
 class Counter:
     k = 0
     l = 1
+
     def counter(self, count):
         if count is 0:
             # natural number
@@ -20,7 +21,6 @@ class Counter:
 
 
 class Euler:
-
     position= {}
     symbolpos = {}
 
@@ -42,7 +42,6 @@ class Euler:
 
         for i in range(1, z):
             sum = self.PositionResult(sum, count)
-
             if(acount < 2 ):
                 Euler.position[sum]= "+"
                 acount = acount + 1
@@ -67,8 +66,7 @@ class Euler:
             i = i + Euler.c.odd()
             return i
 
-
-    def partitionResult(self):
+    def PartitionResult(self):
         l = 0
         for k in (Euler.position.keys()):
 
@@ -83,7 +81,6 @@ class Euler:
                if (k == l):
                    Euler.symbols[k] =(Euler.position.get(k))
 
-
     def finalResult(self):
         sum = 0
         runonce = True
@@ -93,8 +90,8 @@ class Euler:
         Euler.values.append(0)
         i = 1
         k = 1
-        while i <  666:
 
+        while i <  666:
             a = Euler.keys[i]
             b = Euler.keys[i + 1]
             # # need a for loop to move the symbol
@@ -121,14 +118,18 @@ class Euler:
             sum = 0
             runonce = False
 
-
         for i in range(1, len(Euler.keys)):
             Euler.finalresult.append(Euler.keys[i])
+
+        #printing the partition series
+        for i in range(1, len(Euler.finalresult)):
+            print(i,Euler.finalresult[i])
+
         return 0
 
 
 if __name__ == '__main__':
     e = Euler()
     e.EulerPartition(50)
-    e.partitionResult()
+    e.PartitionResult()
     e.finalResult()
