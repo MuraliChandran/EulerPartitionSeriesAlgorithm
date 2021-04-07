@@ -122,7 +122,7 @@ class Euler:
             Euler.finalresult.append(Euler.keys[i])
 
         #printing the partition series
-        for i in range(1, len(Euler.finalresult)):
+        for i in range(0, len(Euler.finalresult)):
             print(i,Euler.finalresult[i])
 
         return 0
